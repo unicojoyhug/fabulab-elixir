@@ -44,3 +44,22 @@ iex(2)> ModulePlayground.say_here
 I am here
 :ok
 ```
+
+- Enum module
+```elixir
+iex(15)> Sample.Enum.first([1,2,3])
+```
+
+- Elixr notation for Function Arity
+  - {funciton name} / {number of parameters}
+  ```elixir
+  add/2
+  print_sum/0
+  first/1
+  ```
+
+  - Unused variable: use `_` 
+  ```
+  warning: variable "head" is unused (if the variable is not meant to be used, prefix it with an underscore)
+  iex:14: Sample.Enum.last/1
+  ```
