@@ -21,4 +21,10 @@ defmodule Sample.Enum do
     defp trace(string) do # private function - cannot be called from outside the module
       IO.puts("The value passed in was #{string}.")
     end
+
+    def map([], _), do: []
+    def map([hd |tl], f) do
+        [f.(hd) | map(tl, f)] # recursion: f.(hd) - call the function f with hd as the argument until the list is empty
+    end
+
 end
