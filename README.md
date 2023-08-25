@@ -10,3 +10,4 @@ Learning Elixir as Fabulab Friday initiative
 ### Create modules and functions
 - [x] Create a module with exs file.
 - [x] Run [ModulePlayground.say_here](./module_playground.exs) in `iex`.
+- [x] Use import, alias, require to run the function.
