@@ -15,3 +15,4 @@ Learning Elixir as Fabulab Friday initiative
 - [x] Use default value for function parameter using `\\`
 - [x] Use `defp` to define private function.
 - [x] Use anonymous functions with lambda style & captured-style
+- [x] Cond macro
