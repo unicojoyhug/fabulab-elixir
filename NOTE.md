@@ -75,3 +75,13 @@ iex(15)> Sample.Enum.first([1,2,3])
   end
   ```
   ```
+
+  - guard clause
+    - comparison (==, !=, ===, !==, >, >=, <, <=)
+    - boolean operators (and, or, not)
+    - arithmetic operators (+, -, *, /)
+    - binary concatenation operator (<>)
+    - `in` operator as long as the right side is a range or a list
+    - type check functions like is_atom/1, is_binary/1
+    - additional functions like abs(number), bit_size(bitstring)
+
