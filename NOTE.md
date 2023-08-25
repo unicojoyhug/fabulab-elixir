@@ -20,7 +20,7 @@ iex(5)> languages
 ## Second step
 ### Create modules and functions
 - [x] Create a module with exs file.
-
+- Module - the basic collection of functions
 - Problem: Having UndefinedFunctionError.
 ```elixir
 iex "module_playground.exs"
@@ -107,4 +107,43 @@ iex(43)> Sample.Enum.add([:one, :two], :zero)
 [:zero, :one, :two]
 ```
 
-- private function using `defp` 
+- private function using `defp`
+
+- Functions as first class citizens
+  - passing functions as arguemnts to other functions (using`&`)
+
+  - returning functions from other functions
+
+  - assigning functions to variables
+
+  ```elixir
+  iex(6)> list = [1,2,3,4]
+  [1, 2, 3, 4]
+  iex(7)> Enum.map(list, &Sample.Utils.square/1)
+  [1, 4, 9, 16]
+  iex(8)> Enum.reduce(list, 0, &Sample.Utils.sum/2) # 0 is accumulator starting with, 1 from list -> sum/2 takes 2 parameters (0,1)->(1,2)->(3,3)->(6,4)
+  10
+  ```
+
+- Anonymous functions
+  - lambda style  
+```elixir
+iex(12)> Enum.map(list, fn(x) -> x*x end)
+[1, 4, 9, 16]
+
+iex(13)> Enum.reduce(list, 0, fn(x, acc) -> acc + x end)
+10
+```
+  - Captured-style
+```elixir
+ # `&` is shorthand for `fn` and `&1` is first parameter `&2` is second parameter
+iex(16)> Enum.map(list, &(&1 * &1))
+[1, 4, 9, 16]
+
+iex(17)> Enum.reduce(list, 0, &(&1 + &2))
+10
+```
+  - call anonymous function within a function, use a dot
+```elixir
+Sample.Utils.custom_func(1, fn(x)-> IO.puts(x) end)
+```

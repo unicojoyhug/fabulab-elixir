@@ -12,3 +12,6 @@ Learning Elixir as Fabulab Friday initiative
 - [x] Run [ModulePlayground.say_here](./module_playground.exs) in `iex`.
 - [x] Use import, alias, require to run the function.
 - [x] Use guard clause to check the input.
+- [x] Use default value for function parameter using `\\`
+- [x] Use `defp` to define private function.
+- [x] Use anonymous functions with lambda style & captured-style
