@@ -58,7 +58,7 @@ iex(15)> Sample.Enum.first([1,2,3])
   first/1
   ```
 
-  - Unused variable: use `_` 
+- Unused variable: use `_` 
   ```
   warning: variable "head" is unused (if the variable is not meant to be used, prefix it with an underscore)
   iex:14: Sample.Enum.last/1
@@ -74,14 +74,35 @@ iex(15)> Sample.Enum.first([1,2,3])
     quantity * elem(book, 2)
   end
   ```
-  ```
 
-  - guard clause
-    - comparison (==, !=, ===, !==, >, >=, <, <=)
-    - boolean operators (and, or, not)
-    - arithmetic operators (+, -, *, /)
-    - binary concatenation operator (<>)
-    - `in` operator as long as the right side is a range or a list
-    - type check functions like is_atom/1, is_binary/1
-    - additional functions like abs(number), bit_size(bitstring)
+- guard clause 
+  - can be used:
+      - comparison (==, !=, ===, !==, >, >=, <, <=)
+      - boolean operators (and, or, not)
+      - arithmetic operators (+, -, *, /)
+      - binary concatenation operator (<>)
+      - `in` operator as long as the right side is a range or a list
+      - type check functions like is_atom/1, is_binary/1
+      - additional functions like abs(number), bit_size(bitstring)
 
+  - order of functions is important
+      - fails
+      ```elixir
+      def first([], val \\ nil), do: val # default value for val is nil
+      def first([head | _]), do: head # pattern matching - head is the first element of the list
+      ```
+
+      - works
+      ```elixir
+      def first([head | _]), do: head # pattern matching - head is the first element of the list
+      def first([], val \\ nil), do: val # default value for val is nil
+      ```
+
+
+- Default value using `\\`
+```elixir
+iex(42)> Sample.Enum.add([:one, :two])
+[0, :one, :two]
+iex(43)> Sample.Enum.add([:one, :two], :zero)
+[:zero, :one, :two]
+```
