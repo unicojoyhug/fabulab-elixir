@@ -63,3 +63,15 @@ iex(15)> Sample.Enum.first([1,2,3])
   warning: variable "head" is unused (if the variable is not meant to be used, prefix it with an underscore)
   iex:14: Sample.Enum.last/1
   ```
+
+  - pattern matching
+  ```elixir
+  def some_func_with_pattern_matching(qunatity, {_, _, price}) do
+    quantity * price
+  end
+
+  def some_func(qunatity, book) do
+    quantity * elem(book, 2)
+  end
+  ```
+  ```

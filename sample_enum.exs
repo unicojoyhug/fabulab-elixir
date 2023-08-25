@@ -1,5 +1,5 @@
 defmodule Sample.Enum do
-    def firstUsingHd(list) do
+    def first_using_hd(list) do
         hd(list) # hd/1 returns the first element of the list
     end
 
