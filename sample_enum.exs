@@ -14,6 +14,11 @@ defmodule Sample.Enum do
     end
 
     def add(list, val \\ 0) do # \\ 0 - set default value as 0
-      [val | list]
+        trace(val)
+        [val | list]
+    end
+
+    defp trace(string) do # private function - cannot be called from outside the module
+      IO.puts("The value passed in was #{string}.")
     end
 end

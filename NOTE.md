@@ -106,3 +106,5 @@ iex(42)> Sample.Enum.add([:one, :two])
 iex(43)> Sample.Enum.add([:one, :two], :zero)
 [:zero, :one, :two]
 ```
+
+- private function using `defp` 
