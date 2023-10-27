@@ -10,6 +10,8 @@ defmodule HelloWorld.Application do
     children = [
       # Starts a worker by calling: HelloWorld.Worker.start_link(arg)
       # {HelloWorld.Worker, arg}
+      # start scheduler when application starts
+      HelloWorld.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
