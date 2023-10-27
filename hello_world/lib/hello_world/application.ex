@@ -11,6 +11,7 @@ defmodule HelloWorld.Application do
       # Starts a worker by calling: HelloWorld.Worker.start_link(arg)
       # {HelloWorld.Worker, arg}
       # start scheduler when application starts
+      HelloWorld.TweetServer,
       HelloWorld.Scheduler
     ]
 
