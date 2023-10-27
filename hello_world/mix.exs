@@ -27,7 +27,9 @@ defmodule HelloWorld.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:credo, "~> 1.2"},
       {:extwitter, "~> 0.14.0"},
-      {:quantum, "~> 2.4"}
+      {:quantum, "~> 2.4"},
+      {:mock, "~> 0.2.0"},
+      {:mix_test_watch, "~> 1.1"}
     ]
   end
 end

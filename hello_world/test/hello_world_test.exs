@@ -6,7 +6,7 @@ defmodule HelloWorldTest do
     assert HelloWorld.hello() == :world
   end
 
-  @tag watching: true
+  @tag watching: false
   test "test" do
     assert 1 != 5
   end

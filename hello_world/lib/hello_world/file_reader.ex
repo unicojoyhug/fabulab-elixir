@@ -1,4 +1,10 @@
 defmodule HelloWorld.FileReader do
+  @doc """
+  Reads a file and returns a random string from it.
+
+  iex> HelloWorld.FileReader.get_strings_to_tweet("priv/sample.txt")
+  """
+
   def get_strings_to_tweet(filename) do
     File.read!(filename)
     |> pick_string
