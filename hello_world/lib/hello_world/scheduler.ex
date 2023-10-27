@@ -1,4 +1,4 @@
 defmodule HelloWorld.Scheduler do
-  use QuantumScheduler,
+  use Quantum,
   otp_app: :hello_world
 end
